@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -27,3 +27,7 @@ def add():
         "answer": sum_result
     })
 
+@app.route('/LoginPage/', methods=['GET', 'POST'])
+def Login():
+    if request.method == 'POST':
+    return render_template('LoginPage.html')
