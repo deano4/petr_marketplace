@@ -6,5 +6,14 @@ body {
 h1{
     color: yellow;
     text-align: center;
-    font-size: 4rem;
+    font-size: 6rem;
+    padding-top: 1rem;
+}
+
+.col{
+    padding: 1.5rem;
+}
+
+img{
+    border-radius: 20px;
 }
