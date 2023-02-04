@@ -1,3 +1,5 @@
+let serverurl_login = 'http://localhost:5000/login'
+let serverurl_sign_up = 'http://localhost:5000/sign_up'
 
 function login_function() {
 var x = document.getElementById('socials');
@@ -28,15 +30,31 @@ if (x.style.display == 'none' && y.style.display === 'none') {
 }
 }
 
-/*
+user_name = document.getElementById('username').textContent;
+password = document.getElementById('password').textContent;
+socials = document.getElementById('socials').textContent;
+
 function login(event) {
-    event.preventDefault();
-    fetch('serverulr/login?username=document.getEmeply()p&pw').then(res => res.json()).then(response => {
+    fetch(serverurl_login + '?username=' + user_name + '&password=' + password)
+        .then(res => res.json())
+        .then(data => {
+            if(!data.error) {
+                console.log('got here!');
+                let logged_in_user = data.uid;
+                window.location = './TradePage.html?uid=' + logged_in_user;
+            }
+    })
+}
+
+/*
+function sign_up(event) {
+    fetch(serverurl_sign_up).then(res => res.json()).then(response => {
         if not logogedinuser in return
         let logogedinuser = response.uid
         window.location = './TradePage.html?uid=' + logogedinuser
     })
 }
 */
+
 
 
