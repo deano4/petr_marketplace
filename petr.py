@@ -1,7 +1,8 @@
 from user import User
 
 class Petr:
-    def __init__(self):
+    def __init__(self, name):
+        self.name = name
         self._wants = []
         self._haves = []
 
@@ -16,3 +17,10 @@ class Petr:
 
     def wants(self) -> list:
         return self._wants
+
+
+    def set_name(self, change):
+        self.name = change
+
+    def get_name(self):
+        return self.name

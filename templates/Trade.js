@@ -1,10 +1,10 @@
-let serverUrl = 'https://0394-169-234-78-124.ngrok.io/trade';
+let serverUrl = 'http://localhost:5000/trade';
 
 function callBackend(sticker) {
     fetch(serverUrl + '?sticker=' + sticker)
         .then(res => res.json())
         .then(data => {
-            console.log(data.users_have)
+            console.log(data)
         })
 }
 
