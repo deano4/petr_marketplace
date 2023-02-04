@@ -4,7 +4,7 @@ function callBackend(sticker) {
     fetch(serverUrl + '?sticker=' + sticker)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log(data.users_want)
         })
 }
 
