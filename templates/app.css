@@ -18,6 +18,10 @@ img{
     padding: 1.5rem;
 }
 
+.col:hover{
+    padding: 1rem;
+}
+
 .form-container {
     display: flex;
     justify-content: center;
