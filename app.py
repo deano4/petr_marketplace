@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request, render_template, redirect, url_for
 from flask_cors import CORS
-from function import login, sign_up, db
+from search import login, sign_up, market
 
 
 
@@ -15,7 +15,6 @@ def index():
 def login_option():
     req_data = {'l': True} # replace with json
     username = request.form.get('username')
-    print(username)
     if request.args.get('f') == '1':
         return render_template('LoginPage.html')
     elif req_data['l'] is True:
@@ -40,11 +39,12 @@ def sign_up_page():
         sign_up(user_data)
         return db.print()
     return render_template('LoginPage.html')
-    return
+    
 
 
 @app.route('/trade')
-def trade():
-    if id is not None:
-        return
+def trade() -> 'json':
+    name = None # del
+    if name is not None:
+        return jsonify(market(name))
     return render_template('TradePage.html')

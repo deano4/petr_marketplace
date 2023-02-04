@@ -11,8 +11,8 @@ class Petr:
     def add_to_haves(self, user: User) -> None:
         self._haves.append(user)
 
-    def get_haves(self) -> list:
+    def haves(self) -> list:
         return self._haves
 
-    def get_wants(self) -> list:
+    def wants(self) -> list:
         return self._wants
