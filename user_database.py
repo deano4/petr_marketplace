@@ -9,3 +9,9 @@ class UserDatabase:
 
     def users(self) -> list[User]:
         return self._users
+
+    def print(self):
+        output = []
+        for index in self._users:
+            output.append(index.get_username())
+        return str(output)

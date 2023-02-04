@@ -1,11 +1,11 @@
 from flask import Flask, jsonify, request, render_template, redirect, url_for
 from flask_cors import CORS
-from function import login, sign_up
+from function import login, sign_up, db
+
 
 
 app = Flask(__name__)
 CORS(app)
-
 # Access this endpoint through: http://localhost:5000/
 @app.route('/')
 def index():
@@ -36,5 +36,7 @@ def login_page():
 @app.route('/sign-up', methods=['GET', 'POST'])
 def sign_up_page():
     if request.method == 'POST':
-        pass
-    return 
+        user_data = request.form.to_dict()
+        sign_up(user_data)
+        return db.print()
+    return render_template('LoginPage.html')
