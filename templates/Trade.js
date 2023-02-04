@@ -1,7 +1,8 @@
 const petrs = document.querySelectorAll('.col');
+let serverUrl = '';
 
 function popUp(event){
-    console.log(event.target.alt);
+    event.target.style.opacity = 0.5;
 }
 
 for(let petr of petrs){
