@@ -7,16 +7,16 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="../app.css">
 
     <title>Petr Marketplace: Login</title>
 </head>
 <body>
     <form action="">
         <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value="John"><br>
+        <input type="text" id="fname" name="fname" value={{ request.form['First Name'] }}><br>
         <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="text" id="lname" name="lname" value={{ request.form['Last Name'] }}><br><br>
         <input type="submit" value="Submit">
       </form>
 
