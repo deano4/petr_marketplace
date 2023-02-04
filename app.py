@@ -21,6 +21,7 @@ def login_option():
         return redirect(url_for('login_page'))
     else:
         return redirect(url_for('sign_up_page'))
+    #unique user id
 
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():

@@ -7,8 +7,8 @@ user_db = UserDatabase()
 petr_db = PetrDatabase()
 
 def login(user: User) -> '???':
-    for i in range(len(UserDatabase.users())):
-        if UserDatabase.users()[i] == user:
+    for i in range(len(user_db.users())):
+        if user_db.users()[i] == user:
             return user
     # user doesnt exists
         return 'errormsg'
