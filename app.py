@@ -27,4 +27,6 @@ def login_page():
 @app.route('/LoginPage/', methods=['GET', 'POST'])
 def Login():
     if request.method == 'POST':
+        name = request.form.get('name')
+        return ('<h1>{{lname}}<h1>', lname=name)
     return render_template('LoginPage.html')
