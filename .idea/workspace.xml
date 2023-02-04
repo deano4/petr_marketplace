@@ -50,23 +50,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Confirmation&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="PyCoverageOptionsProvider">
     <option name="myUseBundledCoveragePy" value="false" />
     <option name="myBranchCoverage" value="true" />
@@ -189,10 +189,10 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/user_py$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1675533715487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/app_py$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1675536437534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/app_py$petr_marketplace.coverage" NAME="petr_marketplace Coverage Results" MODIFIED="1675538978224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/petr_marketplace$petr_marketplace.coverage" NAME="petr_marketplace Coverage Results" MODIFIED="1675488976050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/petr_marketplace$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1675488986439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/app_py$petr_marketplace.coverage" NAME="petr_marketplace Coverage Results" MODIFIED="1675538978224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/app_py$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1675536437534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/user_py$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1675530551403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

@@ -40,3 +40,11 @@ def sign_up_page():
         sign_up(user_data)
         return db.print()
     return render_template('LoginPage.html')
+    return
+
+
+@app.route('/trade')
+def trade():
+    if id is not None:
+        return
+    return render_template('TradePage.html')
