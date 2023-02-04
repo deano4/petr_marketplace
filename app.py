@@ -42,10 +42,9 @@ def sign_up_page():
     return render_template('LoginPage.html')
     
 
-
 @app.route('/trade')
 def trade() -> 'json':
-    name = None # del
+    name = request.args.get('sticker')
     if name is not None:
         return jsonify(market(name))
     return render_template('TradePage.html')

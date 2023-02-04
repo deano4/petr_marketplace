@@ -6,6 +6,19 @@ from petr import Petr
 user_db = UserDatabase()
 petr_db = PetrDatabase()
 
+# hard coding users in 
+user1 = User('peter', 'anteater', '@petera')
+user2 = User('user2', 'anteater', '@peter222')
+user_db.add_user(user1)
+user_db.add_user(user2)
+petr1 = Petr()
+petr2 = Petr()
+petr_db.add_petr('antman', petr1)
+petr_db.add_petr('aot', petr2)
+petr1.add_to_want(user1)
+petr2.add_to_haves(user1)
+
+
 def login(user: User) -> '???':
     for i in range(len(user_db.users())):
         if user_db.users()[i] == user:
