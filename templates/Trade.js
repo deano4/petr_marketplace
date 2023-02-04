@@ -8,16 +8,27 @@ function callBackend(sticker) {
         })
 }
 
-function popUp(event){
+function stickerPage(event,popup){
     event.target.style.opacity = 0.5;
+    popup.style.display = 'block';
     callBackend(event.target.alt)
 }
 
 function load(){
     // get uid from the url window.location
 
+    const popup = document.getElementById("popup");
+    const closeBtn = document.getElementById("closeBtn");
+
     const petrs = document.querySelectorAll('.col img');
     for(let petr of petrs){
-        petr.addEventListener('click', function(e){popUp(e)});
+        petr.addEventListener('click', function(e){stickerPage(e,popup)});
     }
+
+    closeBtn.addEventListener('click', ()=>{
+        popup.style.display = 'none';
+        for(let petr of petrs){
+            petr.style.opacity = 1;
+        }
+    });
 }
