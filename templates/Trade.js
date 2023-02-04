@@ -1,4 +1,4 @@
-let serverUrl = 'https://8a52-169-234-78-124.ngrok.io/trade';
+let serverUrl = 'https://0394-169-234-78-124.ngrok.io/trade';
 
 function callBackend(sticker) {
     fetch(serverUrl + '?sticker=' + sticker)
