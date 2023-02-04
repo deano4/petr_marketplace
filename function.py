@@ -14,8 +14,17 @@ def sign_up(new_user: User) -> '???':
         UserDatabase.add_user(new_user)
 
 
-
-Convert json to dict()
+"""
+Convert json to dict() flask.Request()
 
 
 convert dict to json() "jsonify()"
+
+
+from markupsafe import escape
+
+@app.route("/<name>")
+def hello(name):
+    return f"Hello, {escape(name)}!"
+    
+"""

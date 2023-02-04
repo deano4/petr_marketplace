@@ -1,5 +1,7 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
+from function import login, sign_up
+
 
 app = Flask(__name__)
 CORS(app)
@@ -11,19 +13,18 @@ def index():
 
 """
 Access this endpoint through: http://localhost:5000/adding-test?x=1&y=2
-
-Takes two numbers, adds them together, and returns the value. 
-Not a very good case for setting up and hosting an entire backend
-server but this example shows a proof of concept of how it works.
-
-For a simple example like this, you're better of just writing this 
-in javascript.
 """
-@app.route('/adding-test')
-def add():
-    sum_result = int(request.args.get('x')) + int(request.args.get('y'))
 
-    return jsonify({
-        "answer": sum_result
-    })
+@app.route('/login', methods=['GET', 'POST'])
+def login_page():
+    if request.method == 'POST':
+        return jsonify({'message': 'show login page'})
+        # return login()
+    else:
+        return jsonify({'message': 'enter User in Database'})
+        # return sign_up()
 
+@app.route('/LoginPage/', methods=['GET', 'POST'])
+def Login():
+    if request.method == 'POST':
+    return render_template('LoginPage.html')
