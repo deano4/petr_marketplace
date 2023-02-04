@@ -22,8 +22,9 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 25vh;
     margin: auto;
-    width: 50%
+    width: 50%;
+    padding: 12px 20px;
   }
   
