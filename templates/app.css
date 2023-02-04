@@ -1,10 +1,10 @@
 body {
-    background: #700f00;
+    background: #e1dfba;
     font-family: 'Paytone One', sans-serif;
 }
 
 h1{
-    color: yellow;
+    color: #4d424d;
     text-align: center;
     font-size: 6rem;
     padding-top: 1rem;
@@ -28,3 +28,14 @@ img{
     padding: 12px 20px;
   }
   
+.username_class {
+    color: #7f7e90;
+}
+
+.password_class {
+    color: #7f7e90;
+}
+
+.socials_class {
+    color: #7f7e90;
+}
