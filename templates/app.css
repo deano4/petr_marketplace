@@ -12,6 +12,12 @@ h1{
     padding-top: 1rem;
 }
 
+h2{
+    color: #4d424d;
+    text-align: center;
+    font-size: 10rem;
+}
+
 img{
     border-radius: 20px;
     
@@ -103,4 +109,50 @@ img{
     margin: auto;
     margin-top: 10px;
     text-align: center;
+}
+
+#popup{
+    display: none;
+}
+.popup-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(96 95 127 / 70%);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.popup{
+    background-color: #ffffff;
+    padding: 20px 30px;
+    height: 90%;
+    width: 50%;
+    overflow-y:auto;
+    border-radius: 15px;
+}
+.close-popup{
+    display: flex;
+    justify-content: flex-end;
+}
+.close-popup a{
+    font-size: 1.2rem;
+    background-color: #4d424d;;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+}
+.popup > h2{
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+.popup > p{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }

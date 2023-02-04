@@ -47,4 +47,4 @@ def trade() -> 'json':
     name = request.args.get('sticker')
     if name is not None:
         return jsonify(market(name))
-    return render_template('TradePage.html')
+    return jsonify({'message': 'enter User in Database'})
