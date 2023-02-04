@@ -93,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675488386119</updated>
-      <workItem from="1675488390718" duration="3393000" />
+      <workItem from="1675488390718" duration="4960000" />
     </task>
     <task id="LOCAL-00001" summary="Flask and Flask Cors installed">
       <created>1675488481098</created>
@@ -109,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675489607433</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added User and Social class">
+      <created>1675491880489</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675491880489</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +136,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Flask and Flask Cors installed" />
     <MESSAGE value="Can switch between home page and next page by switching link" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can switch between home page and next page by switching link" />
+    <MESSAGE value="Added User and Social class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added User and Social class" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/petr_marketplace$petr_marketplace.coverage" NAME="petr_marketplace Coverage Results" MODIFIED="1675488976050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
