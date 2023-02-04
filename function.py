@@ -1,5 +1,8 @@
 from user_database import UserDatabase
 from user import User
+
+db = UserDatabase()
+
 def login(user: User) -> '???':
     for i in range(len(UserDatabase.users())):
         if UserDatabase.users()[i] == user:
@@ -7,11 +10,12 @@ def login(user: User) -> '???':
     # user doesnt exists
         return 'errormsg'
 
-def sign_up(new_user: User) -> '???':
-    if new_user in UserDatabase.users():
+def sign_up(some_dict):
+    new_user = User(**some_dict)
+    if new_user in db.users():
         return 'errormsg'
     else:
-        UserDatabase.add_user(new_user)
+        db.add_user(new_user)
 
 
 """
