@@ -45,15 +45,6 @@ img{
     margin-left: 20px;
 }
 
-.login_class:hover {
-    background: #1939ae;
-  }
-
-.login_class:focus {
-    outline: none;
-    box-shadow: 0 0 0 0px #cbd6ee;
-  }
-
   .sign_up_class {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -73,19 +64,11 @@ img{
     margin: auto;
 }
 
-.sign_up_class:hover {
-    background: #1939ae;
-  }
-
-.sign_up_class:focus {
-    outline: none;
-    box-shadow: 0 0 0 0px #cbd6ee;
-  }
 
 .form-container {
     display: flex;
     align-items: center;
-    height: 40vh;
+    height: 48vh;
     width: 20%;
     margin: auto;
     padding: 12px 20px;
@@ -118,6 +101,7 @@ img{
 .submit_button {
     transition: 0.3s ease-out;
     margin: auto;
+    margin-top: 10px;
     text-align: center;
 }
 
