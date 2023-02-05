@@ -37,14 +37,11 @@ function callBackend(sticker,uid) {
         })
 }
 
-function stickerPage(event,popup,uid){
-    const havebtn = document.getElementById("have-btn");
-    const wantbtn = document.getElementById("want-btn");
+function stickerPage(event,popup,uid,sticker){
     event.target.style.opacity = 0.5;
-    callBackend(event.target.alt,uid)
+    sticker = event.target.alt;
+    callBackend(sticker,uid);
     popup.style.display = 'block';
-    havebtn.addEventListener('click', function(){haveToggle(uid,event.target.alt,havebtn)});
-    wantbtn.addEventListener('click', function(){wantToggle(uid,event.target.alt,wantbtn)});
 }
 
 function haveToggle(uid,sticker,btn){
@@ -89,12 +86,17 @@ function load(){
     let uid = params.get('uid');
     console.log(uid);
 
+    let sticker = "";
+
     const popup = document.getElementById("popup");
     const closeBtn = document.getElementById("closeBtn");
 
+    const havebtn = document.getElementById("have-btn");
+    const wantbtn = document.getElementById("want-btn");
+
     const petrs = document.querySelectorAll('.col img');
     for(let petr of petrs){
-        petr.addEventListener('click', function(e){stickerPage(e,popup,uid)});
+        petr.addEventListener('click', function(e){stickerPage(e,popup,uid,sticker)});
     }
 
     closeBtn.addEventListener('click', ()=>{
@@ -103,4 +105,7 @@ function load(){
             petr.style.opacity = 1;
         }
     });
+
+    havebtn.addEventListener('click', function(){haveToggle(uid,sticker,havebtn)});
+    wantbtn.addEventListener('click', function(){wantToggle(uid,sticker,wantbtn)});
 }
