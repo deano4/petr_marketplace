@@ -30,6 +30,7 @@ for fn in first_names:
 petr_names = ("antman", "aot", "bday", "bday", "christmas", "duck", "fire", "firefighter",
               "grad", "green", "hello_kitty", "hero", "horse", "jack", "mom", "nurse",
               "robber", "shrek", "thanos", "theWeeknd")
+
 for petr_n in petr_names:
     x = Petr(petr_n)
     for i in range(0,randrange(0, 10)):
@@ -42,19 +43,37 @@ for petr_n in petr_names:
         x.add_to_haves(adding)
     petr_db.add_petr(x.get_name(), x)
 
-def login(user: User) -> '???':
-    for i in range(len(user_db.users())):
-        if user_db.users()[i] == user:
-            return user
+def login(user, password) -> '???':
+    output = {}
+    for index in range(0, len(user_db.users())):
+        existing_user = user_db.users()[index]
+        if existing_user.check_login(user, password):
+            output['uid'] = existing_user.get_uuid()
+            output['error'] = False
+            return output
     # user doesnt exists
-        return 'errormsg'
+    output['error'] = True
+    return output
 
-def sign_up(some_dict):
-    new_user = User(**some_dict)
+
+
+test_user = User("test", "test", "@test")
+user_db.add_user(test_user)
+petr_db.petrs()["antman"].add_to_want(test_user)
+petr_db.petrs()["antman"].add_to_haves(test_user)
+
+
+def sign_up(username, password, socials):
+    output = {}
+    new_user = User(username, password, socials)
     if new_user in user_db.users():
-        return 'errormsg'
+        output['error'] = True
+        return output
     else:
         user_db.add_user(new_user)
+        output['uuid'] = new_user.get_uuid()
+        output['error'] = False
+        return output
 
 def market(name: str) -> dict:
     a_petr = petr_db.petrs()[name]

@@ -7,40 +7,34 @@ from search import login, sign_up, market
 app = Flask(__name__)
 CORS(app)
 # Access this endpoint through: http://localhost:5000/
-@app.route('/')
-def index():
-    return jsonify({'message': 'Hey, everything works!!'})
 
-@app.route('/login-page')
+"""@app.route('/login-page')
 def login_option():
-    req_data = {'l': True} # replace with json
-    username = request.form.get('username')
+    name = request.args.get('l')
+    username = request.args.get('username')
+    password = request.args.get('password')
+    return login()
     if request.args.get('f') == '1':
         return render_template('LoginPage.html')
     elif req_data['l'] is True:
         return redirect(url_for('login_page'))
     else:
-        return redirect(url_for('sign_up_page'))
+        return redirect(url_for('sign_up_page'))"""
     #unique user id
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login')
 def login_page():
-    if request.method == 'POST':
-        return jsonify({'message': 'show login page'})
-        pass
-        # return login()
-    else:
-        return jsonify({'message': 'enter User in Database'})
-        # return sign_up()
+    username = request.args.get('username')
+    password = request.args.get('password')
+    return jsonify(login(username, password))
     
 @app.route('/sign-up', methods=['GET', 'POST'])
-def sign_up_page():
-    if request.method == 'POST':
-        user_data = request.form.to_dict()
-        sign_up(user_data)
-        return db.print()
-    return render_template('LoginPage.html')
-    
+def sign_up():
+    username = request.args.get('username')
+    password = request.args.get('password')
+    socials = request.args.get('socials')
+    return sign_up(username, password, socials)
+
 
 @app.route('/trade')
 def trade() -> 'json':
@@ -48,3 +42,7 @@ def trade() -> 'json':
     if name is not None:
         return jsonify(market(name))
     return jsonify({'message': 'enter User in Database'})
+
+@app.route('/')
+def index():
+    return jsonify({'message': 'Hey, everything works!!'})
