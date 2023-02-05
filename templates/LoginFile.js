@@ -2,11 +2,20 @@ let serverurl_login = 'http://localhost:5000/login'
 let serverurl_sign_up = 'http://localhost:5000/sign-up'
 
 //the function that adds some 'spirit' to the program 
-function click_image_function() {
-    var x = document.getElementById('spirit_message');
-    x.style.display = 'block'
-    x.style.animation = 'hideAnimation 0s ease-in 3s';
+function main_petr_function() {
+    var x = document.getElementById('left_petr1');
+    var y = document.getElementById('left_petr2');
+    x.style.display = 'none';
+    y.style.display = 'block';
 }
+
+function second_petr_function() {
+    var x = document.getElementById('left_petr1');
+    var y = document.getElementById('left_petr2');
+    x.style.display = 'block';
+    y.style.display = 'none';
+}
+
 
 //the function that switches the content when pressing the 'login' button
 function login_function() {
