@@ -41,10 +41,10 @@
         <!--onsubmit="return false;" onsubmit="login(event)"-->
         <form class="form-group" onsubmit="return false;" method="post">
             <div class='login_class'>
-                <button id = 'login_button' type="submit" class="btn btn-primary">Login</button>
+                <button id = 'login_button' type="submit" class="btn btn-primary" onclick = 'login_function()'>Login</button>
             </div>
             <div class='sign_up_class'>
-                <button id = 'sign_up_button' type="submit" class="btn btn-primary">Sign-up</button>
+                <button id = 'sign_up_button' type="submit" class="btn btn-primary" onclick = 'sign_up_function()'>Sign-up</button>
             </div>
             <div class='username_class'>
                 <label id ='username_label' for="username" class="form-label" style = 'font-size: 17pt;'>Username:</label>
@@ -55,31 +55,17 @@
                 <input name='password' id='password' type="text" class="form-control" placeholder="Password" >
             </div>
             <div class='socials_class'>
-                <label id ='socials_label' for="exampleFormControlTextarea1" class="form-label" style = 'font-size: 17pt; '>Any socials?:</label>
-                <textarea id='socials' class="form-control" rows="3">@socials</textarea>
+                <label id ='socials_label' for="exampleFormControlTextarea1" class="form-label" style = 'font-size: 17pt; display:block'>Any socials?:</label>
+                <textarea id='socials' class="form-control" rows="3" style="display: block">@socials</textarea>
             </div>
             <div class='submit_button'>
-                <button id = 'submit' type="submit" class="btn btn-primary">Submit</button>
+                <button id = 'submit' type="submit" class="btn btn-primary" style='text-align: center' onsubmit="login(event)">Submit</button>
+                <button id = 'submit2' type="submit" class='btn btn-primary' style="display: none; text-align: center" onsubmit="sign_up(event)">Submit2</button>
             </div>
             
         </form>
       </div>
-      <button id="myBtn">Try it</button>
-      <script>
-            const test = document.getElementById("login_button")
-            test.addEventListener('click', myFunction2)
-            function myFunction2() {
-                document.getElementById("login_button").style.visibility = 'hidden';
-
-            }
-        
-            const element = document.getElementById("myBtn");
-            element.addEventListener("click", myFunction);
-
-            function myFunction() {
-            document.getElementById("socials").style.visibility= 'hidden';
-            }
-        </script>
+      <script src='LoginFile.js'></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
