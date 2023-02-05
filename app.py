@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request, render_template, redirect, url_for
 from flask_cors import CORS
-from search import login, sign_up, market
+from search import login, sign_up, market, have_toggle, want_toggle
 
 
 
@@ -33,14 +33,31 @@ def sign_up_page():
     username = request.args.get('username')
     password = request.args.get('password')
     socials = request.args.get('socials')
-    return sign_up(username, password, socials)
+    return jsonify(sign_up(username, password, socials))
 
 
 @app.route('/trade')
 def trade() -> 'json':
     name = request.args.get('sticker')
+    uid = request.args.get('uid')
     if name is not None:
-        return jsonify(market(name))
+        return jsonify(market(name, uid))
+    return jsonify({'message': 'enter User in Database'})
+
+@app.route('/have')
+def have():
+    name = request.args.get('sticker')
+    uid = request.args.get('uid')
+    if name is not None:
+        return jsonify(have_toggle(name, uid))
+    return jsonify({'message': 'enter User in Database'})
+
+@app.route('/wants')
+def wants():
+    name = request.args.get('sticker')
+    uid = request.args.get('uid')
+    if name is not None:
+        return jsonify(want_toggle(name, uid))
     return jsonify({'message': 'enter User in Database'})
 
 @app.route('/')

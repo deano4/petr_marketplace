@@ -49,6 +49,7 @@ function haveToggle(uid,sticker,btn){
     fetch(serverUrlHave + '?sticker=' + sticker + '&uid=' + uid)
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             if(!data.error)
             {
                 if(btn.className=="btn btn-outline-primary")

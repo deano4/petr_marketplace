@@ -28,7 +28,7 @@ class User:
     def get_socials(self) -> str:
         return self._socials
 
-    def get_uuid(self):
+    def get_uid(self):
         return self._uid
 
     def check_login(self, user, password):
