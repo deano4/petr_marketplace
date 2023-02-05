@@ -1,5 +1,5 @@
-let serverurl_login = 'http://localhost:5000/login'
-let serverurl_sign_up = 'http://localhost:5000/sign-up'
+let serverurl_login = 'http://127.0.0.1:5000/login'
+let serverurl_sign_up = 'http://127.0.0.1:5000/sign-up'
 
 //the function that adds some 'spirit' to the program 
 function main_petr_function() {
