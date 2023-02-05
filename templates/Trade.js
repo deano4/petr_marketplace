@@ -2,6 +2,7 @@ let serverUrl = 'http://localhost:5000/trade';
 let serverUrlHave = 'http://localhost:5000/have';
 let serverUrlWant = 'http://localhost:5000/want';
 
+let sticker = "";
 
 function callBackend(sticker,uid) {
 
@@ -37,7 +38,7 @@ function callBackend(sticker,uid) {
         })
 }
 
-function stickerPage(event,popup,uid,sticker){
+function stickerPage(event,popup,uid){
     event.target.style.opacity = 0.5;
     sticker = event.target.alt;
     callBackend(sticker,uid);
@@ -88,8 +89,6 @@ function load(){
     let uid = params.get('uid');
     console.log(uid);
 
-    let sticker = "";
-
     const popup = document.getElementById("popup");
     const closeBtn = document.getElementById("closeBtn");
 
@@ -98,7 +97,7 @@ function load(){
 
     const petrs = document.querySelectorAll('.col img');
     for(let petr of petrs){
-        petr.addEventListener('click', function(e){stickerPage(e,popup,uid,sticker)});
+        petr.addEventListener('click', function(e){stickerPage(e,popup,uid)});
     }
 
     closeBtn.addEventListener('click', ()=>{
