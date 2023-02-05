@@ -6,13 +6,13 @@ class Petr:
         self._wants = {}
         self._haves = {}
 
-    def add_to_want(self, user: User) -> None:
+    def add_to_wants(self, user: User) -> None:
         self._wants[user.get_username()] = user.get_socials()
         
     def add_to_haves(self, user: User) -> None:
         self._haves[user.get_username()] = user.get_socials()
 
-    def del_to_want(self, user: User) -> None:
+    def del_to_wants(self, user: User) -> None:
         del self._wants[user.get_username()]
 
     def del_to_haves(self, user: User) -> None:
