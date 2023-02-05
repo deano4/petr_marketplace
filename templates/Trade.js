@@ -60,7 +60,12 @@ function haveToggle(uid,sticker,btn){
                 {
                     btn.className="btn btn-outline-primary";
                 }
-                callBackend(sticker,uid);
+                let temp = "";
+                Object.keys(data.list_have).forEach(function(key) {
+                    temp += key + ": " + data.list_have[key] + "<br>";
+                    temp += "------------------<br>"
+                });
+                document.getElementById("have-list").innerHTML = temp;
             }
         })
     
@@ -80,7 +85,12 @@ function wantToggle(uid,sticker,btn){
                 {
                     btn.className="btn btn-outline-primary";
                 }
-                callBackend(sticker,uid);
+                let temp2 = "";
+                Object.keys(data.list_want).forEach(function(key) {
+                    temp2 += key + ": " + data.list_want[key] + "<br>";
+                    temp2 += "------------------<br>"
+                });
+                document.getElementById("want-list").innerHTML = temp2;
             }
         })
 }
