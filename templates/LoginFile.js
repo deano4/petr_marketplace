@@ -3,15 +3,15 @@ let serverurl_sign_up = 'http://127.0.0.1:5000/sign-up'
 
 //the function that adds some 'spirit' to the program 
 function main_petr_function() {
-    var x = document.getElementById('left_petr1');
-    var y = document.getElementById('left_petr2');
+    var x = document.getElementById('testing');
+    var y = document.getElementById('testing2');
     x.style.display = 'none';
     y.style.display = 'block';
 }
 
 function second_petr_function() {
-    var x = document.getElementById('left_petr1');
-    var y = document.getElementById('left_petr2');
+    var x = document.getElementById('testing');
+    var y = document.getElementById('testing2');
     x.style.display = 'block';
     y.style.display = 'none';
 }

@@ -33,27 +33,16 @@
         font-size: 75px;
         transition: 1.0s ease-out;
     }
-
-    .hide {
-    display: none;
-    }
-        
-    .myDIV:hover + .hide {
-    display: block;
-    color: blue;
-    text-align: center;
-    }
-
     </style>
     <h1 class="display-2">PETR MARKETPLACE</h1>
     <div class = 'testing'>
-        <img id = 'testing' src="images/Petr Stickers/Layer 0.png" alt=".img-fluid. max-width: 25% " style =  'display: block' onmouseover="main_petr_function()">
+        <img id = 'testing' src="images/Petr Stickers/Layer 0.png" alt=".img-fluid. max-width: 25% " style =  'display: block; transition: 0.5s ease-out; margins: auto' onmouseover="main_petr_function()">
     </div>
     <div class = 'testing2'>
-        <img id = 'testing2' src="images/Petr Stickers/Layer 0 closed.png" alt=".img-fluid. max-width: 25% " style = 'display: none' onmouseleave="second_petr_function()">
+        <img id = 'testing2' src="images/Petr Stickers/Layer 0 closed.png" alt=".img-fluid. max-width: 25% " style = 'display: none; transition: 0.5s ease-out; margins: auto' onmouseleave="second_petr_function()">
     </div>
     
-    <img src="images/Petr Stickers/gradtrans.png" alt=".img-fluid." style = 'margin: auto; height: 650px; width: 700px; transform: rotate(45deg); position: absolute; top: 50px; left: -220px; transition: 0.5s ease-out;'>
+    <img src="images/Petr Stickers/gradtrans.png" alt=".img-fluid." style = 'margin: auto; height: 650px; width: 700px; transform: rotate(45deg); position: absolute; top: 50px; left: -220px; transition: 0.5s ease-out; margins: auto'>
     <title>Petr Marketplace: Login</title>
 </head>
 <body>
@@ -87,9 +76,7 @@
       </div>
       <div class = 'alert_message'>
         <label id ='alert' class="form_label" style = 'font-size: 17pt; display: none'>Error: Username Does Not Exist</label>
-      </div>
-      <div class="myDIV">d</div>
-      <div class="hide">ZOT ! ZOT ! ZOT !</div>   
+      </div> 
       <div class = 'description_section'>
         <h2 class="what_info">What is PETR MARKETPLACE?</h2>
         <div class="row row-cols-2">
