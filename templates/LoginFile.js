@@ -1,17 +1,18 @@
 let serverurl_login = 'http://127.0.0.1:5000/login'
 let serverurl_sign_up = 'http://127.0.0.1:5000/sign-up'
 
-//the function that adds some 'spirit' to the program 
+//the function that adds some 'spirit' to the program (CLOSED)
 function main_petr_function() {
-    var x = document.getElementById('testing');
-    var y = document.getElementById('testing2');
+    var x = document.getElementById('left_petr_open');
+    var y = document.getElementById('left_petr_closed');
     x.style.display = 'none';
     y.style.display = 'block';
 }
 
+//the function that adds some 'spirit' to the program (OPEN)
 function second_petr_function() {
-    var x = document.getElementById('testing');
-    var y = document.getElementById('testing2');
+    var x = document.getElementById('left_petr_open');
+    var y = document.getElementById('left_petr_closed');
     x.style.display = 'block';
     y.style.display = 'none';
 }
