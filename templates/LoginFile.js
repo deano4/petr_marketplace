@@ -33,8 +33,30 @@ if (x.style.display == 'none' && y.style.display === 'none') {
 function login(event) {
     user_name = document.getElementById('username').value;
     password = document.getElementById('password').value;
-    console.log(user_name, password)
     fetch(serverurl_login + '?username=' + user_name + '&password=' + password)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data.error);
+            if(!data.error) {
+                let logged_in_user = data.uid;
+                window.location = './TradePage.html?uid=' + logged_in_user;
+            }
+            else
+            {
+                document.getElementById('username').innerHTML = "";
+                document.getElementById('password').innerHTML = "";
+                document.getElementById('alert_message').style.display = 'block';
+                //clear text boxes, raise an alert pop-up, 
+            }
+    })
+}
+
+/*
+function sign_up(event) {
+    user_name = document.getElementById('username').value;
+    password = document.getElementById('password').value;
+    socials = document.getElementById('socials').value;
+    fetch(serverurl_sign_up + '?username=' + user_name + '&password=' + password + '&socials=' + socials)
         .then(res => res.json())
         .then(data => {
             console.log(data.error);
@@ -44,6 +66,7 @@ function login(event) {
             }
     })
 }
+*/
 
 /*
 function sign_up(event) {
