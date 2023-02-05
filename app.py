@@ -42,7 +42,6 @@ def trade() -> 'json':
     uid = request.args.get('uid')
     if name is not None:
         return jsonify(market(name, uid))
-    return jsonify({'message': 'enter User in Database'})
 
 @app.route('/have')
 def have():
@@ -50,7 +49,6 @@ def have():
     uid = request.args.get('uid')
     if name is not None:
         return jsonify(have_toggle(name, uid))
-    return jsonify({'message': 'enter User in Database'})
 
 @app.route('/wants')
 def wants():
@@ -58,7 +56,6 @@ def wants():
     uid = request.args.get('uid')
     if name is not None:
         return jsonify(want_toggle(name, uid))
-    return jsonify({'message': 'enter User in Database'})
 
 @app.route('/')
 def index():
