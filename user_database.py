@@ -13,7 +13,6 @@ class UserDatabase:
     def search_uid(self, select_uid: str)-> User:
         for a_user in self._users:
             if a_user.get_uid() == select_uid:
-                print(a_user)
                 return a_user
     def search_username(self, username: str) -> User:
         for user in self._users:

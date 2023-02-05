@@ -52,10 +52,8 @@ def have():
 
 @app.route('/want')
 def wants():
-    print('SOMETHI')
     name = request.args.get('sticker')
     uid = request.args.get('uid')
-    print(name, uid)
     if name is not None:
         return jsonify(want_toggle(name, uid))
 
