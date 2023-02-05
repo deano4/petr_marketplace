@@ -1,6 +1,7 @@
 let serverurl_login = 'http://localhost:5000/login'
 let serverurl_sign_up = 'http://localhost:5000/sign_up'
 
+//the function that switches the content when pressing the 'login' button
 function login_function() {
 var x = document.getElementById('socials');
 var y = document.getElementById('socials_label');
@@ -16,6 +17,7 @@ if (x.style.display == 'block' && y.style.display === 'block') {
 }
 }
 
+//the function that switches the content when pressing the 'sign_up' button
 function sign_up_function() {
 var x = document.getElementById('socials');
 var y = document.getElementById('socials_label');
@@ -30,6 +32,7 @@ if (x.style.display == 'none' && y.style.display === 'none') {
 }
 }
 
+//the function that approves the 'login' info
 function login(event) {
     user_name = document.getElementById('username').value;
     password = document.getElementById('password').value;
@@ -51,7 +54,7 @@ function login(event) {
     })
 }
 
-/*
+//the function that approves the 'sign_up' info
 function sign_up(event) {
     user_name = document.getElementById('username').value;
     password = document.getElementById('password').value;
@@ -64,22 +67,15 @@ function sign_up(event) {
                 let logged_in_user = data.uid;
                 window.location = './TradePage.html?uid=' + logged_in_user;
             }
+            else
+            {
+                document.getElementById('username').value = "";
+                document.getElementById('password').value = "";
+                document.getElementById('socials').value = "";
+                document.getElementById('alert').style.display = 'block';
+            }
     })
 }
-*/
-
-/*
-function sign_up(event) {
-    socials = document.getElementById('socials').value;
-    user_name = document.getElementById('username').value;
-    password = document.getElementById('password').value;
-    fetch(serverurl_sign_up).then(res => res.json()).then(response => {
-        if not logogedinuser in return
-        let logogedinuser = response.uid
-        window.location = './TradePage.html?uid=' + logogedinuser
-    })
-}
-*/
 
 
 
