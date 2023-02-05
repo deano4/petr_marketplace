@@ -15,6 +15,7 @@ function callBackend(sticker,uid) {
     fetch(serverUrl + '?sticker=' + sticker + '&uid=' + uid)
         .then(res => res.json())
         .then(data => {
+            console.log('trade',data)
             let temp = "";
             Object.keys(data.list_have).forEach(function(key) {
                 temp += key + ": " + data.list_have[key] + "<br>";
@@ -46,10 +47,11 @@ function stickerPage(event,popup,uid){
 }
 
 function haveToggle(uid,sticker,btn){
+    console.log("Have:", sticker, uid)
     fetch(serverUrlHave + '?sticker=' + sticker + '&uid=' + uid)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log('have',data)
             if(!data.error)
             {
                 if(btn.className=="btn btn-outline-primary")
@@ -75,6 +77,7 @@ function wantToggle(uid,sticker,btn){
     fetch(serverUrlWant + '?sticker=' + sticker + '&uid=' + uid)
         .then(res => res.json())
         .then(data => {
+            console.log('want',data)
             if(!data.error)
             {
                 if(btn.className=="btn btn-outline-primary")
