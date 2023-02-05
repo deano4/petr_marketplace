@@ -59,8 +59,8 @@ function haveToggle(uid,sticker,btn){
                 {
                     btn.className="btn btn-outline-primary";
                 }
+                callBackend(sticker,uid);
             }
-            callBackend(sticker,uid);
         })
     
 }
@@ -79,8 +79,8 @@ function wantToggle(uid,sticker,btn){
                 {
                     btn.className="btn btn-outline-primary";
                 }
+                callBackend(sticker,uid);
             }
-            callBackend(sticker,uid);
         })
 }
 
