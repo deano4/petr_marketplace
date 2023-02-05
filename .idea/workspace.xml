@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="78429421-0904-48be-a843-6c8039e1b047" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petr.py" beforeDir="false" afterPath="$PROJECT_DIR$/petr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petr_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/petr_database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/LoginFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/LoginFile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,9 +181,10 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/user_py$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1675533715487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/app_py$search.coverage" NAME="search Coverage Results" MODIFIED="1675559455175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/app_py$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1675561421808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/app_py$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1675562417007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/petr_marketplace$petr_marketplace.coverage" NAME="petr_marketplace Coverage Results" MODIFIED="1675488976050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/petr_marketplace$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1675488986439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/app_py$petr_marketplace.coverage" NAME="petr_marketplace Coverage Results" MODIFIED="1675539347251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/app_py$petr.coverage" NAME="petr Coverage Results" MODIFIED="1675561749858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

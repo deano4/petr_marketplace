@@ -1,5 +1,5 @@
 let serverurl_login = 'http://localhost:5000/login'
-let serverurl_sign_up = 'http://localhost:5000/sign_up'
+let serverurl_sign_up = 'http://localhost:5000/sign-up'
 
 //the function that switches the content when pressing the 'login' button
 function login_function() {

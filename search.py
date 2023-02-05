@@ -98,6 +98,8 @@ def market(name: str, uid: str) -> dict:
         "user_have": user_have
     }
     return output
+have
+want
 
 
 """
