@@ -43,8 +43,8 @@ function login(event) {
             }
             else
             {
-                user_name = " ";
-                password = " ";
+                document.getElementById('username').value = "";
+                document.getElementById('password').value = "";
                 document.getElementById('alert').style.display = 'block';
                 //clear text boxes, raise an alert pop-up, 
             }
