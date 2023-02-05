@@ -32,9 +32,15 @@ function callBackend(sticker,uid) {
             {
                 hb.className = "btn btn-success";
             }
+            else {
+                hb.className = "btn btn-outline-primary";
+            }
             if(data.user_want)
             {
                 wb.className = "btn btn-success";
+            }
+            else {
+                wb.className = "btn btn-outline-primary";
             }
         })
 }

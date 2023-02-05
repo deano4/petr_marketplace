@@ -111,11 +111,13 @@ def have_toggle(name: str, uid: str) -> dict:
         if user.get_uid() == uid:
             a_petr.del_to_haves(user)
             output["list_have"] = a_petr.haves()
+            output["user_have"] = False
             output['error'] = False
             return output
     the_user = user_db.search_uid(uid)
     a_petr.add_to_haves(the_user)
     output["list_have"] = a_petr.haves()
+    output["user_have"] = True
     output['error'] = False
     return output
     #except:
@@ -132,11 +134,13 @@ def want_toggle(name: str, uid: str):
             if user.get_uid() == uid:
                 a_petr.del_to_wants(user)
                 output["list_want"] = a_petr.wants()
+                output["user_want"] = False
                 output['error'] = False
                 return output
         the_user = user_db.search_uid(uid)
         a_petr.add_to_wants(the_user)
         output["list_want"] = a_petr.wants()
+        output["user_want"] = True
         output['error'] = False
         return output
     except:
