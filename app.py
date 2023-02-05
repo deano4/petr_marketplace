@@ -41,7 +41,6 @@ def trade() -> 'json':
     if request.method == 'GET':
         name = request.args.get('sticker')
         uid = request.args.get('uid')
-        
         return jsonify(market(name, uid))
 
 @app.route('/have', methods=['GET', 'POST'])
@@ -51,8 +50,9 @@ def have():
     if name is not None:
         return jsonify(have_toggle(name, uid))
 
-@app.route('/wants')
+@app.route('/want')
 def wants():
+    print('SOMETHI')
     name = request.args.get('sticker')
     uid = request.args.get('uid')
     print(name, uid)

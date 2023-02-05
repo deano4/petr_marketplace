@@ -82,12 +82,14 @@ def market(name: str, uid: str) -> dict:
     user_want = False
     user_have = False
     usrs_want = {}
-    for user in wants:
+    for username in wants.keys():
+        user = user_db.search_username(username)
         usrs_want[user.get_username()] = user.get_socials()
         if uid == user.get_uid():
             user_want = True
     usrs_have =  {}
-    for user in haves:
+    for username in haves.keys():
+        user = user_db.search_username(username)
         usrs_have[user.get_username()] = user.get_socials()
         if uid == user.get_uid():
             user_have = True
@@ -122,25 +124,31 @@ def have_toggle(name: str, uid: str) -> dict:
 
 
 def want_toggle(name: str, uid: str):
+    print('SUCCESS')
     output = {}
-    try:
-        a_petr = petr_db.petrs()[name]
-        want_list = a_petr.want()
-        for a_user in want_list:
-            if a_user.get_uid() == uid:
-                a_petr.del_to_want(a_user)
-                output["list_want"] = want_list
-                output['error'] = False
-                return output
-        the_user = user_db.search_uid(uid)
-        a_petr.add_to_want(the_user)
-        output["list_want"] = want_list
-        output['error'] = False
-        return output
-    except:
-        output["list_want"] = want_list
-        output['error'] 
-        return output
+    
+    print("name:" + name)
+    print(uid)
+    a_petr = petr_db.petrs()[name]
+    want_list = a_petr.wants()
+    for username in want_list.keys():
+        user = user_db.search_username(username)
+        if user.get_uid() == uid:
+            a_petr.del_to_want(user)
+            output["list_want"] = a_petr.wants()
+            output['error'] = False
+            print(output)
+            return output
+    print('WE GOT HERE')
+    the_user = user_db.search_uid(uid)
+    a_petr.add_to_want(the_user)
+    output["list_want"] = a_petr.wants()
+    output['error'] = False
+    print(output)
+    return output
+    
+    output['error'] = True
+    return output
 
 
 """
