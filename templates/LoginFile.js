@@ -1,6 +1,13 @@
 let serverurl_login = 'http://localhost:5000/login'
 let serverurl_sign_up = 'http://localhost:5000/sign-up'
 
+//the function that adds some 'spirit' to the program 
+function click_image_function() {
+    var x = document.getElementById('spirit_message');
+    x.style.display = 'block'
+    x.style.animation = 'hideAnimation 0s ease-in 3s';
+}
+
 //the function that switches the content when pressing the 'login' button
 function login_function() {
 var x = document.getElementById('socials');
@@ -31,6 +38,7 @@ if (x.style.display == 'none' && y.style.display === 'none') {
     z.style.textAlign =  'center';
 }
 }
+
 
 //the function that approves the 'login' info
 function login(event) {
