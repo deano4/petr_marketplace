@@ -17,6 +17,8 @@ class Petr:
 
     def del_to_haves(self, user: User) -> None:
         self._haves.remove(user)
+        # for index in self._haves:
+        #    print(index.get_username(), index.get_uid(), index.get_password())
 
     def haves(self) -> list:
         return self._haves

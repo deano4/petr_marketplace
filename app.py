@@ -40,6 +40,9 @@ def sign_up_page():
 def trade() -> 'json':
     name = request.args.get('sticker')
     uid = request.args.get('uid')
+    print('\n\n\n\n'+name)
+    print('\n\n\n\n'+uid)
+
     if name is not None:
         return jsonify(market(name, uid))
 

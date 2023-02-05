@@ -112,7 +112,7 @@ def have_toggle(name: str, uid: str) -> dict:
         the_user = user_db.search_uid(uid)
         a_petr.add_to_haves(the_user)
         output['error'] = False
-        return output
+        return have_list
     except:
         output['error'] = True
         return output
