@@ -43,9 +43,9 @@ function login(event) {
             }
             else
             {
-                document.getElementById('username').innerHTML = "";
-                document.getElementById('password').innerHTML = "";
-                document.getElementById('alert_message').style.display = 'block';
+                user_name = " ";
+                password = " ";
+                document.getElementById('alert').style.display = 'block';
                 //clear text boxes, raise an alert pop-up, 
             }
     })

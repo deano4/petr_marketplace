@@ -162,3 +162,11 @@ img{
     margin-top: 10px;
     font-size: 1.6rem;
 }
+
+.alert_message {
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+    transition: 1.0s ease-out;
+    
+}
