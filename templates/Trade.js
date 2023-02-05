@@ -1,17 +1,23 @@
 let serverUrl = 'http://localhost:5000/trade';
 
 function callBackend(sticker) {
+    document.getElementById("popup-name").innerHTML = sticker;
+    document.getElementById("popup-img").src = "images/Petr Stickers/petr_" + sticker + ".jpg";
     fetch(serverUrl + '?sticker=' + sticker)
         .then(res => res.json())
         .then(data => {
-            console.log(data.users_want)
+            let temp = "";
+            data.users_have.keys(obj).forEach(function(key) {
+                temp += key + ": " + obj[key];
+            });
+            document.getElementById("have-list").innerHTML = temp;
         })
 }
 
 function stickerPage(event,popup){
     event.target.style.opacity = 0.5;
-    popup.style.display = 'block';
     callBackend(event.target.alt)
+    popup.style.display = 'block';
 }
 
 function load(){
