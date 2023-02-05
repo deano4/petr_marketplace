@@ -158,9 +158,7 @@ img{
     width: 15rem;
 }
 
-.col-info > h3{
+.col-info > button{
     margin-top: 10px;
-    font-size: 2rem;
-    color: #4d424d;
-    text-align: center;
+    font-size: 1.6rem;
 }
