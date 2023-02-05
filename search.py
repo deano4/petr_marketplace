@@ -48,7 +48,7 @@ def login(user, password) -> '???':
     for index in range(0, len(user_db.users())):
         existing_user = user_db.users()[index]
         if existing_user.check_login(user, password):
-            output['uid'] = existing_user.get_uuid()
+            output['uid'] = existing_user.get_uid()
             output['error'] = False
             return output
     # user doesnt exists
@@ -56,7 +56,7 @@ def login(user, password) -> '???':
     return output
 
 
-
+# a testable user
 test_user = User("test", "test", "@test")
 user_db.add_user(test_user)
 petr_db.petrs()["antman"].add_to_want(test_user)
@@ -66,14 +66,14 @@ petr_db.petrs()["antman"].add_to_haves(test_user)
 def sign_up(username, password, socials):
     output = {}
     new_user = User(username, password, socials)
-    if new_user in user_db.users():
-        output['error'] = True
-        return output
-    else:
-        user_db.add_user(new_user)
-        output['uuid'] = new_user.get_uuid()
-        output['error'] = False
-        return output
+    for a_user in user_db.users():
+        if username == a_user.get_username():
+            output['error'] = True
+            return output
+    user_db.add_user(new_user)
+    output['uid'] = new_user.get_uid()
+    output['error'] = False
+    return output
 
 def market(name: str, uid: str) -> dict:
     a_petr = petr_db.petrs()[name]
@@ -84,12 +84,12 @@ def market(name: str, uid: str) -> dict:
     usrs_want = {}
     for user in wants:
         usrs_want[user.get_username()] = user.get_socials()
-        if uid == user.get_uuid():
+        if uid == user.get_uid():
             user_want = True
     usrs_have =  {}
     for user in haves:
         usrs_have[user.get_username()] = user.get_socials()
-        if uid == user.get_uuid():
+        if uid == user.get_uid():
             user_have = True
     output = {
         "list_want": usrs_want,
@@ -98,8 +98,43 @@ def market(name: str, uid: str) -> dict:
         "user_have": user_have
     }
     return output
-have
-want
+
+def have_toggle(name: str, uid: str) -> dict:
+    try:
+        output = {}
+        a_petr = petr_db.petrs()[name]
+        have_list = a_petr.haves()
+        for a_user in have_list:
+            if a_user.get_uid() == uid:
+                a_petr.del_to_haves(a_user)
+                output['error'] = False
+                return output
+        the_user = user_db.search_uid(uid)
+        a_petr.add_to_haves(the_user)
+        output['error'] = False
+        return output
+    except:
+        output['error'] = True
+        return output
+
+
+def want_toggle(name: str, uid: str):
+    try:
+        output = {}
+        a_petr = petr_db.petrs()[name]
+        want_list = a_petr.want()
+        for a_user in want_list:
+            if a_user.get_uid() == uid:
+                a_petr.del_to_want(a_user)
+                output['error'] = False
+                return output
+        the_user = user_db.search_uid(uid)
+        a_petr.add_to_want(the_user)
+        output['error'] = False
+        return output
+    except:
+        output['error'] 
+        return output
 
 
 """

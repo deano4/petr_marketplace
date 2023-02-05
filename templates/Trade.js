@@ -2,6 +2,7 @@ let serverUrl = 'http://localhost:5000/trade';
 let serverUrlHave = 'http://localhost:5000/have';
 let serverUrlWant = 'http://localhost:5000/want';
 
+let sticker = "";
 
 function callBackend(sticker,uid) {
 
@@ -37,7 +38,7 @@ function callBackend(sticker,uid) {
         })
 }
 
-function stickerPage(event,popup,uid,sticker){
+function stickerPage(event,popup,uid){
     event.target.style.opacity = 0.5;
     sticker = event.target.alt;
     callBackend(sticker,uid);
@@ -48,6 +49,7 @@ function haveToggle(uid,sticker,btn){
     fetch(serverUrlHave + '?sticker=' + sticker + '&uid=' + uid)
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             if(!data.error)
             {
                 if(btn.className=="btn btn-outline-primary")
@@ -58,6 +60,12 @@ function haveToggle(uid,sticker,btn){
                 {
                     btn.className="btn btn-outline-primary";
                 }
+                let temp = "";
+                Object.keys(data.list_have).forEach(function(key) {
+                    temp += key + ": " + data.list_have[key] + "<br>";
+                    temp += "------------------<br>"
+                });
+                document.getElementById("have-list").innerHTML = temp;
             }
         })
     
@@ -77,6 +85,12 @@ function wantToggle(uid,sticker,btn){
                 {
                     btn.className="btn btn-outline-primary";
                 }
+                let temp2 = "";
+                Object.keys(data.list_want).forEach(function(key) {
+                    temp2 += key + ": " + data.list_want[key] + "<br>";
+                    temp2 += "------------------<br>"
+                });
+                document.getElementById("want-list").innerHTML = temp2;
             }
         })
 }
@@ -86,8 +100,6 @@ function load(){
     let uid = params.get('uid');
     console.log(uid);
 
-    let sticker = "";
-
     const popup = document.getElementById("popup");
     const closeBtn = document.getElementById("closeBtn");
 
@@ -96,7 +108,7 @@ function load(){
 
     const petrs = document.querySelectorAll('.col img');
     for(let petr of petrs){
-        petr.addEventListener('click', function(e){stickerPage(e,popup,uid,sticker)});
+        petr.addEventListener('click', function(e){stickerPage(e,popup,uid)});
     }
 
     closeBtn.addEventListener('click', ()=>{
