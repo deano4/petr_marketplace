@@ -10,8 +10,7 @@ class UserDatabase:
     def users(self) -> list[User]:
         return self._users
 
-    def print(self):
-        output = []
-        for index in self._users:
-            output.append(index.get_username())
-        return str(output)
+    def search_uid(self, select_uid):
+        for a_user in self._users:
+            if a_user == select_uid:
+                return a_user

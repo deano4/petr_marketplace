@@ -29,7 +29,7 @@ def login_page():
     return jsonify(login(username, password))
     
 @app.route('/sign-up', methods=['GET', 'POST'])
-def sign_up():
+def sign_up_page():
     username = request.args.get('username')
     password = request.args.get('password')
     socials = request.args.get('socials')

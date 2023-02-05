@@ -75,19 +75,31 @@ def sign_up(username, password, socials):
         output['error'] = False
         return output
 
-def market(name: str) -> dict:
+def market(name: str, uid: str) -> dict:
     a_petr = petr_db.petrs()[name]
     wants = a_petr.wants() 
     haves = a_petr.haves()
+    user_want = False
+    user_have = False
     usrs_want = {}
     for user in wants:
         usrs_want[user.get_username()] = user.get_socials()
+        if uid == user.get_uuid():
+            user_want = True
     usrs_have =  {}
     for user in haves:
         usrs_have[user.get_username()] = user.get_socials()
-    print(usrs_want)
-    return {"users_want": usrs_want, "users_have": usrs_have}
-    
+        if uid == user.get_uuid():
+            user_have = True
+    output = {
+        "list_want": usrs_want,
+        "list_have": usrs_have,
+        "user_want": user_want,
+        "user_have": user_have
+    }
+    return output
+
+
 """
 Convert json to dict() flask.Request()
 

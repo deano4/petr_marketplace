@@ -12,6 +12,12 @@ class Petr:
     def add_to_haves(self, user: User) -> None:
         self._haves.append(user)
 
+    def del_to_want(self, user: User) -> None:
+        self._wants.remove(user)
+
+    def del_to_haves(self, user: User) -> None:
+        self._haves.remove(user)
+
     def haves(self) -> list:
         return self._haves
 
