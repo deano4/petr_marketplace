@@ -169,3 +169,11 @@ img{
     transition: 1.0s ease-out;
     
 }
+
+#signoutlnk{
+    display: inline-block;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    font-size: 1.6rem;
+    color: #4d424d;
+}
