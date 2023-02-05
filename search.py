@@ -100,39 +100,45 @@ def market(name: str, uid: str) -> dict:
     return output
 
 def have_toggle(name: str, uid: str) -> dict:
+    output = {}
     try:
-        output = {}
         a_petr = petr_db.petrs()[name]
         have_list = a_petr.haves()
         for a_user in have_list:
             if a_user.get_uid() == uid:
                 a_petr.del_to_haves(a_user)
+                output["list_have"] = have_list
                 output['error'] = False
                 return output
         the_user = user_db.search_uid(uid)
         a_petr.add_to_haves(the_user)
+        output["list_have"] = have_list
         output['error'] = False
         return output
     except:
+        output["list_want"] = want_list
         output['error'] = True
         return output
 
 
 def want_toggle(name: str, uid: str):
+    output = {}
     try:
-        output = {}
         a_petr = petr_db.petrs()[name]
         want_list = a_petr.want()
         for a_user in want_list:
             if a_user.get_uid() == uid:
                 a_petr.del_to_want(a_user)
+                output["list_want"] = want_list
                 output['error'] = False
                 return output
         the_user = user_db.search_uid(uid)
         a_petr.add_to_want(the_user)
+        output["list_want"] = want_list
         output['error'] = False
         return output
     except:
+        output["list_want"] = want_list
         output['error'] 
         return output
 

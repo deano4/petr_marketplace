@@ -1,6 +1,6 @@
-let serverUrl = 'http://localhost:5000/trade';
-let serverUrlHave = 'http://localhost:5000/have';
-let serverUrlWant = 'http://localhost:5000/want';
+let serverUrl = 'http://127.0.0.1:5000/trade';
+let serverUrlHave = 'http://127.0.0.1:5000/have';
+let serverUrlWant = 'http://127.0.0.1:5000/want';
 
 let sticker = "";
 

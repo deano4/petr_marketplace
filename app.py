@@ -36,14 +36,15 @@ def sign_up_page():
     return jsonify(sign_up(username, password, socials))
 
 
-@app.route('/trade')
+@app.route('/trade', methods=['GET', 'POST'])
 def trade() -> 'json':
-    name = request.args.get('sticker')
-    uid = request.args.get('uid')
-    if name is not None:
+    if request.method == 'GET':
+        name = request.args.get('sticker')
+        uid = request.args.get('uid')
+        
         return jsonify(market(name, uid))
 
-@app.route('/have')
+@app.route('/have', methods=['GET', 'POST'])
 def have():
     name = request.args.get('sticker')
     uid = request.args.get('uid')
@@ -54,6 +55,7 @@ def have():
 def wants():
     name = request.args.get('sticker')
     uid = request.args.get('uid')
+    print(name, uid)
     if name is not None:
         return jsonify(want_toggle(name, uid))
 
