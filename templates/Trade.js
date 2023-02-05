@@ -7,7 +7,7 @@ function callBackend(sticker) {
         .then(res => res.json())
         .then(data => {
             let temp = "";
-            data.users_have.keys(obj).forEach(function(key) {
+            Object.keys(data.users_have).forEach(function(key) {
                 temp += key + ": " + obj[key];
             });
             document.getElementById("have-list").innerHTML = temp;
