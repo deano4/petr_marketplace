@@ -140,6 +140,7 @@ img{
     text-decoration: none;
     border-radius: 10px;
     display: inline-block;
+    position: fixed;
 }
 .popup > h2{
     color: #4d424d;
